@@ -2,7 +2,7 @@
 <div>
   <div id="main">
     <app-header></app-header>
-    <thumbs></thumbs>
+    <thumbs v-on:loaded="loadViewer"></thumbs>
     <app-footer></app-footer>
   </div>
   <viewer></viewer>
@@ -24,6 +24,11 @@ export default {
     AppHeader,
     Thumbs,
     Viewer
+  },
+  methods: {
+    loadViewer: (data) => {
+      console.log(data);
+    }
   }
 }
 </script>

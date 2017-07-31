@@ -20,6 +20,7 @@ export default {
     created() {
         Cosmic.getObjects({ bucket }, (err, res) => {
             this.items = res.objects.all;
+            this.$emit('loaded', this.items[0]);
             console.log(res.objects);
         });
     },
