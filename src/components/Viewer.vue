@@ -16,11 +16,13 @@
 </template>
 
 <script>
+import {EventBus} from '../event_bus';
+
 export default {
     name: 'viewer',
     props: ['bus'],
     created() {
-        this.bus.$on('loaded', (obj) => {
+        EventBus.$on('loaded', (obj) => {
             this.img = obj;
         });
     },
@@ -31,10 +33,10 @@ export default {
     },
     methods: {
         selectNext() {
-            this.bus.$emit('move', 1);
+            EventBus.$emit('move', 1);
         },
         selectPrev() {
-            this.bus.$emit('move', -1);
+            EventBus.$emit('move', -1);
         }
     }
 }

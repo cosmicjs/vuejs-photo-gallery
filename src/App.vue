@@ -2,10 +2,10 @@
   <div>
     <div id="main">
       <app-header></app-header>
-      <thumbs :bus="bus"></thumbs>
+      <thumbs></thumbs>
       <app-footer></app-footer>
     </div>
-    <viewer :bus="bus"></viewer>
+    <viewer></viewer>
   </div>
 </template>
 
@@ -18,26 +18,11 @@ import Vue from 'vue';
 
 export default {
   name: 'app',
-  props: {
-    image: {
-      default: 'dsasd'
-    },
-    busObj: {
-      default: () => {
-        return new Vue();
-      }
-    }
-  },
   components: {
     AppFooter,
     AppHeader,
     Thumbs,
     Viewer
-  },
-  data: function() {
-    return {
-      bus: this.busObj
-    }
   }
 }
 </script>

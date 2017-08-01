@@ -13,6 +13,7 @@
 <script>
 import Cosmic from 'cosmicjs';
 import * as Config from '../config';
+import {EventBus} from '../event_bus';
 
 const bucket = { slug: Config.bucket };
 
@@ -22,9 +23,9 @@ export default {
     created() {
         Cosmic.getObjects({ bucket }, (err, res) => {
             this.items = res.objects.all;
-            this.bus.$emit('loaded', this.items[0]);
+            EventBus.$emit('loaded', this.items[0]);
         });
-        this.bus.$on('move', (dir) => {
+        EventBus.$on('move', (dir) => {
             this.activeIndex = this.activeIndex + dir;
             if (dir > 0 && this.activeIndex >= this.items.length) {
                 this.activeIndex = 0;
@@ -32,7 +33,7 @@ export default {
             if (dir < 0 && this.activeIndex < 0) {
                 this.activeIndex = this.items.length - 1;
             }
-            this.bus.$emit('loaded', this.items[this.activeIndex]);
+            EventBus.$emit('loaded', this.items[this.activeIndex]);
         });
     },
     data () {
@@ -43,7 +44,7 @@ export default {
     },
     methods: {
         selectImage (itm, index) {
-            this.bus.$emit('loaded', itm);
+            EventBus.$emit('loaded', itm);
             this.activeIndex = index;
         }
     }
