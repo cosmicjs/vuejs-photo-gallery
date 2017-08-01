@@ -1,7 +1,7 @@
 {
     "scripts": {
         "dokku": {
-            "predeploy": "npm run build"
+            "predeploy": "node prepare.js && npm run build"
         }
     }
 }

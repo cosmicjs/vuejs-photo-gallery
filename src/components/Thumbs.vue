@@ -12,8 +12,9 @@
 
 <script>
 import Cosmic from 'cosmicjs';
+import * as Config from '../config';
 
-const bucket = { slug: 'cosmic-vue' };
+const bucket = { slug: Config.bucket };
 
 export default {
     name: 'thumbs',
