@@ -9,10 +9,6 @@
 <script>
 
 export default {
-  name: 'app-footer',
-  data () {
-    return {
-    }
-  }
+  name: 'app-footer'
 }
 </script>
