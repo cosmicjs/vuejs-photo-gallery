@@ -19,9 +19,8 @@ const bucket = { slug: Config.bucket };
 
 export default {
     name: 'thumbs',
-    props: ['bus'],
     created() {
-        Cosmic.getObjects({ bucket }, (err, res) => {
+        Cosmic.getObjectType({ bucket }, { type_slug: 'photos' }, (err, res) => {
             this.items = res.objects.all;
             EventBus.$emit('loaded', this.items[0]);
         });

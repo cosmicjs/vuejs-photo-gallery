@@ -20,7 +20,6 @@ import {EventBus} from '../event_bus';
 
 export default {
     name: 'viewer',
-    props: ['bus'],
     created() {
         EventBus.$on('loaded', (obj) => {
             this.img = obj;

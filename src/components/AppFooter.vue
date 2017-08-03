@@ -1,14 +1,23 @@
 <template>
     <footer id="footer">
-        <ul class="copyright">
-            <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
-        </ul>
+        <div v-html="text"></div>
     </footer>
 </template>
 
 <script>
+import {EventBus} from '../event_bus';
 
 export default {
-  name: 'app-footer'
+    name: 'app-footer',
+    created() {
+        EventBus.$on('global_loaded', (obj) => {
+            this.text = obj.metafield.footer.value;
+        });
+    },
+    data () {
+        return {
+            text: null
+        }
+    }
 }
 </script>
