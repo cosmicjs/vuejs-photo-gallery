@@ -1,5 +1,5 @@
 Config = {
-    bucket: 'cosmic-vue'
+    bucket: 'vuejs-photo-gallery'
 };
 
 module.exports = Config;

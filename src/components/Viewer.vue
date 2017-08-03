@@ -9,7 +9,7 @@
                 <h2>{{ img.title }}</h2>
                 <div v-html="img.content"></div>
             </div>
-            <div class="image" v-bind:style='{ backgroundImage: "url(" + img.metafield.image.imgix_url + ")" }'>
+            <div class="image" v-bind:style='{ backgroundImage: "url(" + img.metafield.image.imgix_url + ")", backgroundSize: "cover",  backgroundPosition: "center" }'>
             </div>
         </div> 
     </div>
