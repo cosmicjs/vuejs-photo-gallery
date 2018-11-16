@@ -1,6 +1,6 @@
 # Vue.js Photo Gallery
 ![Image](https://cosmic-s3.imgix.net/c4747e70-785d-11e7-998b-6dbc6e078b76.jpg?w=1000)
-[View demo](https://cosmicjs.com/apps/vuejs-photo-gallery)
+### [View the demo](https://cosmicjs.com/apps/vuejs-photo-gallery)
 > A Vue.js Photo Gallery Powered by [Cosmic JS](https://cosmicjs.com)
 
 ## Install on Cosmic JS
