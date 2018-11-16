@@ -1,22 +1,30 @@
 # Vue.js Photo Gallery
 ![Image](https://cosmic-s3.imgix.net/c4747e70-785d-11e7-998b-6dbc6e078b76.jpg?w=1000)
-[View a demo](https://cosmicjs.com/apps/vuejs-photo-gallery)
+[View demo](https://cosmicjs.com/apps/vuejs-photo-gallery)
 > A Vue.js Photo Gallery Powered by [Cosmic JS](https://cosmicjs.com)
 
-## Build Setup
+## Install on Cosmic JS
+1. Log in to [Cosmic JS](https://cosmicjs.com/login)
+2. Create a new Bucket
+3. Follow the steps on the [Vue Photo Gallery App](https://cosmicjs.com/apps/vuejs-photo-gallery) page
 
+## Install using the Cosmic CLI
 ``` bash
-# install dependencies
-npm install
+// Install Cosmic CLI
+npm i cosmic-cli -g
 
-# serve with hot reload at localhost:8080
-npm run dev
+// Login
+cosmic login
 
-# build for production with minification
-npm run build
+// Select Bucket
+cosmic use-bucket <your-target-bucket-slug>
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+// Install App to your Bucket and download codebase locally
+cosmic install-app vuejs-photo-gallery
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+// Start App locally
+cosmic start-app
+
+// Deploy App to Cosmic App Server
+cosmic deploy-app
+``
