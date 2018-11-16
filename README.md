@@ -27,4 +27,4 @@ cosmic start-app
 
 // Deploy App to Cosmic App Server
 cosmic deploy-app
-``
+```
