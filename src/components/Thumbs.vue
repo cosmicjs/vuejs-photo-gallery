@@ -2,7 +2,7 @@
     <section id="thumbnails">
         <article v-for="(item, index) in items" v-bind:class="{ 'active': activeIndex == index }">
             <a class="thumbnail" v-on:click="selectImage(item, index)">
-                <img v-bind:src="item.metafield.image.imgix_url" alt="" />
+                <img v-bind:src="decorateImgixUrl(item.metafield.image.imgix_url)" alt="" />
             </a>
             <h2>{{ item.title }}</h2>
             <div v-html="item.content"></div>
@@ -45,7 +45,10 @@ export default {
         selectImage (itm, index) {
             EventBus.$emit('loaded', itm);
             this.activeIndex = index;
-        }
+        },
+        decorateImgixUrl (imgixUrl) {
+            return imgixUrl + '?auto=format,compress&w=200&dpr=2';
+        }    
     }
 }
 </script>
