@@ -8,23 +8,11 @@
 2. Create a new Bucket
 3. Follow the steps on the [Vue Photo Gallery App](https://cosmicjs.com/apps/vuejs-photo-gallery) page
 
-## Install locally using the Cosmic CLI
+
+## Install locally
 ``` bash
-# Install Cosmic CLI
-npm i cosmic-cli -g
-
-# Login
-cosmic login
-
-# Select Bucket
-cosmic use-bucket <your-target-bucket-slug>
-
-# Install App to your Bucket and download codebase locally
-cosmic install-app vuejs-photo-gallery
-
-# Start App locally
-cosmic start-app
-
-# Deploy App to Cosmic App Server
-cosmic deploy-app
+git clone https://github.com/cosmicjs/vuejs-photo-gallery
+cd vuejs-photo-gallery
+npm i
+npm run dev
 ```
