@@ -9,7 +9,7 @@
 3. Follow the steps on the [Vue Photo Gallery App](https://cosmicjs.com/apps/vuejs-photo-gallery) page
 
 
-## Install locally
+## Install and run locally
 ``` bash
 git clone https://github.com/cosmicjs/vuejs-photo-gallery
 cd vuejs-photo-gallery
