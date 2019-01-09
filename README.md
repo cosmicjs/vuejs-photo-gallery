@@ -6,7 +6,7 @@
 ## Install on Cosmic JS
 1. Log in to [Cosmic JS](https://cosmicjs.com/login)
 2. Create a new Bucket
-3. Follow the steps on the [Vue Photo Gallery App](https://cosmicjs.com/apps/vuejs-photo-gallery) page
+3. Click "Install Free" on the [Vue Photo Gallery App](https://cosmicjs.com/apps/vuejs-photo-gallery) page
 
 
 ## Install and run locally
